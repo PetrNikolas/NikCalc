@@ -33,12 +33,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="VymazVse"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
 
             <Button
                 android:layout_width="60dp"
@@ -50,12 +45,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="VymazJeden"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
 
             <Button
                 android:layout_width="60dp"
@@ -67,12 +57,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Odmocni"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
 
             <Button
                 android:layout_width="60dp"
@@ -84,12 +69,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Zapor"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
 
         </TableRow>
 
@@ -107,12 +87,7 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
+                android:background="@color/colorPrimary"
                 android:onClick="ZapisCislo"/>
 
             <Button
@@ -124,12 +99,7 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
+                android:background="@color/colorPrimary"
                 android:onClick="ZapisCislo"/>
 
             <Button
@@ -141,12 +111,7 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
+                android:background="@color/colorPrimary"
                 android:onClick="ZapisCislo"/>
 
             <Button
@@ -159,12 +124,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Vydel"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
         </TableRow>
 
         <TableRow
@@ -181,13 +141,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"/>
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -198,13 +153,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"/>
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -215,13 +165,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"/>
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -233,12 +178,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Vynasob"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
         </TableRow>
 
         <TableRow
@@ -255,15 +195,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"
-
-                />
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -274,13 +207,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"/>
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -291,13 +219,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"/>
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -309,12 +232,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Odecti"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
         </TableRow>
 
         <TableRow
@@ -330,18 +248,10 @@
                 android:id="@+id/tlac0"
                 android:layout_marginRight="4dp"
                 android:layout_marginLeft="4dp"
-
-
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCislo"
-                />
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCislo" />
 
             <Button
                 android:layout_width="60dp"
@@ -352,13 +262,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="ZapisCarku"
-                />
+                android:background="@color/colorPrimary"
+                android:onClick="ZapisCarku" />
 
             <Button
                 android:layout_width="60dp"
@@ -371,12 +276,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Secti"
-
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10" />
+                android:background="@color/colorPrimary" />
         </TableRow>
 
         <TableRow
@@ -394,14 +294,8 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
-                android:background="@drawable/buttonshape"
-                android:shadowColor="#ffffffff"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="10"
-                android:onClick="Vypocti"
-
-                />
+                android:background="@color/colorPrimary"
+                android:onClick="Vypocti" />
 
         </TableRow>
 
@@ -423,7 +317,7 @@
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="NaN"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/Cislo1"
                 android:textSize="12dp"
                 android:layout_alignRight="@+id/linearLayout"
@@ -442,7 +336,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="..."
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/Znamenko"
                 android:textSize="15dp"
                 android:layout_alignRight="@+id/linearLayout"
@@ -462,7 +356,7 @@
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="NaN"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/Cislo2"
                 android:textSize="12dp"
                 android:layout_alignRight="@+id/linearLayout"
@@ -489,7 +383,7 @@
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="0"
-                android:textColor="#FFFFFF"
+                android:textColor="#000"
                 android:id="@+id/Obrazovka"
                 android:textSize="40sp"
                 android:layout_alignRight="@+id/linearLayout"
