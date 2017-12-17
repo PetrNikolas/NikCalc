@@ -14,23 +14,23 @@ class MainActivity : AppCompatActivity() {
     /**
      * Deklarace potřebných objektů TextView (pro zobrazování dat).
      */
-    internal lateinit var Obraz: TextView
-    internal lateinit var Cislo1: TextView
-    internal lateinit var Cislo2: TextView
-    internal lateinit var Operace: TextView
+    internal lateinit var Screen: TextView
+    internal lateinit var FirstNumber: TextView
+    internal lateinit var SecondNumber: TextView
+    internal lateinit var Operations: TextView
 
     /**
-     * Privátní proměnné C1,C2,Vys slouží k ukládání čísel.
-     * Proměnná metoda slouží pro uchování záznamu s jakou metodou chce uživatel počítat.
-     * Boolean proměnné prosel a C1Nastaven jsou pro řídící účeli aplikace. Pomocí nich ošetřujeme možné problémy se zadáváním čísel a ujištění se, že máme zadáno C1 když chceme počítat dál.
+     * Privátní proměnné Number1,Number2,Result slouží k ukládání čísel.
+     * Proměnná Method slouží pro uchování záznamu s jakou metodou chce uživatel počítat.
+     * Boolean proměnné valid a SetFirstNumber jsou pro řídící účeli aplikace. Pomocí nich ošetřujeme možné problémy se zadáváním čísel a ujištění se, že máme zadáno Number1 když chceme počítat dál.
      */
-    private var prosel = false
-    private var C1Nastaven = false
+    private var valid = false
+    private var SetFirstNumber = false
 
-    private var C1: Double = 0.toDouble()
-    private var C2: Double = 0.toDouble()
-    private var Vys: Double = 0.toDouble()
-    private var metoda = 0
+    private var Number1: Double = 0.toDouble()
+    private var Number2: Double = 0.toDouble()
+    private var Result: Double = 0.toDouble()
+    private var Method = 0
 
     /**
      * V onCreate provedeme inicializaci objektů TextView (pro zobrazování dat).
@@ -41,18 +41,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
 
-        Obraz = findViewById(R.id.Obrazovka) as TextView
-        Obraz.text = "0"
+        Screen = findViewById(R.id.Obrazovka) as TextView
+        Screen.text = "0"
 
-        Cislo1 = findViewById(R.id.Cislo1) as TextView
-        Cislo1.text = "NaN"
+        FirstNumber = findViewById(R.id.Cislo1) as TextView
+        FirstNumber.text = "NaN"
 
-        Cislo2 = findViewById(R.id.Cislo2) as TextView
-        Cislo2.text = "NaN"
+        SecondNumber = findViewById(R.id.Cislo2) as TextView
+        SecondNumber.text = "NaN"
 
-        Operace = findViewById(R.id.Znamenko) as TextView
+        Operations = findViewById(R.id.Znamenko) as TextView
 
-        Operace.text = "..."
+        Operations.text = "..."
     }
 
     /**
@@ -60,85 +60,85 @@ class MainActivity : AppCompatActivity() {
      * @param sender díky tomuto parametru dostaneme ID tlačítka na které uživatel kliknul.
      */
     fun ZapisCislo(sender: View) {
-        val tlac = sender as Button
-        val number = java.lang.Float.parseFloat(tlac.text.toString())
+        val btn = sender as Button
+        val number = java.lang.Float.parseFloat(btn.text.toString())
 
-        val pom = Obraz.length()
+        val pom = Screen.length()
         if (pom >= 9) {
 
-            if (pom >= 9 && prosel == false) {
+            if (pom >= 9 && valid == false) {
                 if (number == 0f) {
-                    Obraz.text = "0"
+                    Screen.text = "0"
                     return
                 } else {
-                    Obraz.text = tlac.text
-                    prosel = true
+                    Screen.text = btn.text
+                    valid = true
                 }
             }
             return
         }
-        if (prosel == false) {
+        if (valid === false) {
 
             if (number == 0f) {
                 return
             } else {
-                Obraz.text = tlac.text
-                prosel = true
+                Screen.text = btn.text
+                valid = true
             }
         } else {
-            Obraz.append(tlac.text)
+            Screen.append(btn.text)
         }
     }
 
     /**
      * Metoda se ukončí, pokud je na obrazovce už více než 8 znaků.
-     * Pokud se "." na obrazovce nenachází, přidá ji na konec řetězce a nastaví true u řídící proměnné prosel.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * Pokud se "." na obrazovce nenachází, přidá ji na konec řetězce a nastaví true u řídící proměnné valid.
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun ZapisCarku(v: View) {
-        if (Obraz.text.length >= 8) {
+        if (Screen.text.length >= 8) {
             return
         }
-        val test = Obraz.text.toString()
-        val hled = "."
-        if (test.indexOf(hled) < 0) {
-            Obraz.append(".")
-            prosel = true
+        val test = Screen.text.toString()
+        val symbol = "."
+        if (test.indexOf(symbol) < 0) {
+            Screen.append(".")
+            valid = true
         }
 
     }
 
     /**
      * Metoda která vynuluje všechny použité proměnné i zobrazovací textView.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun VymazVse(v: View) {
-        prosel = false
-        C1 = 0.0
-        C2 = 0.0
-        Vys = 0.0
-        metoda = 5
+        valid = false
+        Number1 = 0.0
+        Number2 = 0.0
+        Result = 0.0
+        Method = 5
 
-        Obraz.text = "0"
-        Cislo1.text = "NaN"
-        Cislo2.text = "NaN"
-        Operace.text = "..."
+        Screen.text = "0"
+        FirstNumber.text = "NaN"
+        SecondNumber.text = "NaN"
+        Operations.text = "..."
     }
 
     /**
-     * Na základě délky řetězce buď smaže poslední znak, anebo nastaví textView Obraz na "0".
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * Na základě délky řetězce buď smaže poslední znak, anebo nastaví textView Screen na "0".
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun VymazJeden(v: View) {
-        val delka = Obraz.length()
+        val lenght = Screen.length()
 
-        if (delka > 1) {
-            val puvodnistring = Obraz.text.toString()
-            val substring = puvodnistring.substring(0, delka - 1)
-            Obraz.setText(substring)
-        } else if (delka > 0) {
-            Obraz.text = "0"
-            prosel = false
+        if (lenght > 1) {
+            val previousString = Screen.text.toString()
+            val substring = previousString.substring(0, lenght - 1)
+            Screen.setText(substring)
+        } else if (lenght > 0) {
+            Screen.text = "0"
+            valid = false
         }
     }
 
@@ -146,24 +146,24 @@ class MainActivity : AppCompatActivity() {
      * Pokud je na obrazovce 0, nestane se nic.
      * Našte řetězec a zjistí na jaké pozici je "-". Pokud výsledek není -1, nahradíme znak "-" prázdným řetězcem "".
      * Pokud jsou souřadnice znaménka "-" <=8, připíšeme "-" na začátek řetězce.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun Zapor(v: View) {
-        val k = java.lang.Float.parseFloat(Obraz.text.toString())
+        val k = java.lang.Float.parseFloat(Screen.text.toString())
         if (k == 0f) {
             return
         }
-        var test = Obraz.text.toString()
-        val hled = "-"
+        var test = Screen.text.toString()
+        val symbol = "-"
 
-        if (test.indexOf(hled) != -1) {
+        if (test.indexOf(symbol) != -1) {
             test = test.replace("-", "")
-            Obraz.text = test
+            Screen.text = test
             return
         } else {
             if (test.length <= 8) {
                 test = "-" + test
-                Obraz.text = test
+                Screen.text = test
             }
         }
     }
@@ -171,31 +171,31 @@ class MainActivity : AppCompatActivity() {
     /**
      * Protože budeme odmocňovat, je třeba vymazat všechny proměnné.
      * Pokud bude výsledek delší než 9 znaků, vytvoříme substring prvních 9 čísel. Pomocí podmínek ošetříme, aby se nezobrazovaly nežádoucí čísla.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun Odmocni(v: View) {
-        val number = Math.sqrt(java.lang.Double.parseDouble(Obraz.text.toString()))
+        val number = Math.sqrt(java.lang.Double.parseDouble(Screen.text.toString()))
         VymazVse(v)
 
         if (number >= 0) {
-            val Vysledek = number.toString()
+            val result = number.toString()
 
-            if (Vysledek.length >= 9) {
-                val substring = Vysledek.substring(0, 9)
+            if (result.length >= 9) {
+                val substring = result.substring(0, 9)
                 if (substring == "1.0000000" || substring == "0.9999998" || substring == "0.9999999") {
-                    Obraz.text = "1"
+                    Screen.text = "1"
                     return
                 } else {
-                    Obraz.setText(substring)
+                    Screen.setText(substring)
                     return
                 }
             }
             if (number != 0.0) {
-                val Zbav = java.lang.Double.parseDouble(Vysledek)
+                val Zbav = java.lang.Double.parseDouble(result)
                 val Zbav2 = Math.round(Zbav).toInt()
-                Obraz.text = Zbav2.toString()
+                Screen.text = Zbav2.toString()
             } else {
-                Obraz.text = "0"
+                Screen.text = "0"
             }
         } else {
             Toast.makeText(this, "Nelze odmocnit záporné číslo!", Toast.LENGTH_LONG).show()
@@ -205,92 +205,92 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Následující metody Secti, odecti, vynasob, vydel budou mít stejný princip.
-     * Uloží do globální proměnné C1 číslo na obrazovce a z metodu (číslo 1-4). Také nastaví potřebné řídící proměnné.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * Uloží do globální proměnné Number1 číslo na obrazovce a z metodu (číslo 1-4). Také nastaví potřebné řídící proměnné.
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun Secti(v: View) {
-        C1 = java.lang.Double.parseDouble(Obraz.text.toString())
+        Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
-        metoda = 1
-        Obraz.text = "0"
-        prosel = false
-        C1Nastaven = true
+        Method = 1
+        Screen.text = "0"
+        valid = false
+        SetFirstNumber = true
 
-        Cislo1.text = C1.toString()
-        Operace.text = "+"
+        FirstNumber.text = Number1.toString()
+        Operations.text = "+"
     }
 
     fun Odecti(v: View) {
-        C1 = java.lang.Double.parseDouble(Obraz.text.toString())
+        Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
-        metoda = 2
-        Obraz.text = "0"
-        prosel = false
-        C1Nastaven = true
+        Method = 2
+        Screen.text = "0"
+        valid = false
+        SetFirstNumber = true
 
-        Cislo1.text = C1.toString()
-        Operace.text = "-"
+        FirstNumber.text = Number1.toString()
+        Operations.text = "-"
     }
 
     fun Vynasob(V: View) {
-        C1 = java.lang.Double.parseDouble(Obraz.text.toString())
+        Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
-        metoda = 3
-        Obraz.text = "0"
-        prosel = false
-        C1Nastaven = true
+        Method = 3
+        Screen.text = "0"
+        valid = false
+        SetFirstNumber = true
 
-        Cislo1.text = C1.toString()
-        Operace.text = "*"
+        FirstNumber.text = Number1.toString()
+        Operations.text = "*"
     }
 
     fun Vydel(V: View) {
-        C1 = java.lang.Double.parseDouble(Obraz.text.toString())
+        Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
-        metoda = 4
-        Obraz.text = "0"
-        prosel = false
-        C1Nastaven = true
+        Method = 4
+        Screen.text = "0"
+        valid = false
+        SetFirstNumber = true
 
-        Cislo1.text = C1.toString()
-        Operace.text = "/"
+        FirstNumber.text = Number1.toString()
+        Operations.text = "/"
 
     }
 
     /**
-     * Pokud se metoda nerovná 5, znamená to, že je nastavená a lze načíst do paměti C2.
+     * Pokud se Method nerovná 5, znamená to, že je nastavená a lze načíst do paměti Number2.
      * Podle toho o jakou metodu se jedná se provede patřičná operace pomocí switch case.
      * Při dělení vznikají dlouhé řetězce čísel, proto je třeba po počítání zjistit, na jakém místě je desetinná čárka a podle toho zaokrouhlit.
-     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. metoda onclick
+     * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
     fun Vypocti(v: View) {
 
-        if (C1Nastaven == true) {
-            if (metoda != 5) {
-                C2 = java.lang.Double.parseDouble(Obraz.text.toString())
-                Cislo2.text = C2.toString()
+        if (SetFirstNumber == true) {
+            if (Method != 5) {
+                Number2 = java.lang.Double.parseDouble(Screen.text.toString())
+                SecondNumber.text = Number2.toString()
             }
-            when (metoda) {
+            when (Method) {
                 1 -> {
-                    Vys = C1 + C2
-                    metoda = 5
+                    Result = Number1 + Number2
+                    Method = 5
                 }
 
                 2 -> {
-                    Vys = C1 - C2
-                    metoda = 5
+                    Result = Number1 - Number2
+                    Method = 5
                 }
 
                 3 -> {
-                    Vys = C1 * C2
-                    metoda = 5
+                    Result = Number1 * Number2
+                    Method = 5
                 }
 
                 4 -> {
 
-                    if (C2 != 0.0) {
-                        Vys = C1 / C2
-                        metoda = 5
+                    if (Number2 != 0.0) {
+                        Result = Number1 / Number2
+                        Method = 5
                         // break
                     } else {
                         Toast.makeText(this, "Nelze dělit nulou!", Toast.LENGTH_LONG).show()
@@ -302,31 +302,31 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            if (Vys == 0.0) {
-                Obraz.text = "0"
+            if (Result == 0.0) {
+                Screen.text = "0"
             } else {
 
                 val DF = DecimalFormat("#.########")
-                var Vysl = DF.format(Vys)
-                Vysl = Vysl.replace(",", ".")
+                var result = DF.format(Result)
+                result = result.replace(",", ".")
 
-                val poz = Vysl.indexOf(".")
+                val poz = result.indexOf(".")
                 if (poz >= 8) {
                     Toast.makeText(this, "Byl překročen limit 9 čísel", Toast.LENGTH_LONG).show()
                     VymazVse(v)
                     return
                 }
 
-                if (Vysl.length >= 10) {
-                    val substring = Vysl.substring(0, 9)
-                    Obraz.setText(substring)
+                if (result.length >= 10) {
+                    val substring = result.substring(0, 9)
+                    Screen.setText(substring)
                     return
                 } else {
-                    Obraz.text = Vysl
+                    Screen.text = result
                 }
 
-                C1Nastaven = false
-                prosel = false
+                SetFirstNumber = false
+                valid = false
             }
         }
     }
