@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         val pom = Screen.length()
         if (pom >= 9) {
 
-            if (pom >= 9 && valid == false) {
+            if (pom >= 9 && valid === false) {
                 if (number == 0f) {
                     Screen.text = "0"
                     return
