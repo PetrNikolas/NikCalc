@@ -45,14 +45,14 @@ class MainActivity : AppCompatActivity() {
         Screen.text = "0"
 
         FirstNumber = findViewById(R.id.Cislo1) as TextView
-        FirstNumber.text = "NaN"
+        FirstNumber.text = ""
 
         SecondNumber = findViewById(R.id.Cislo2) as TextView
-        SecondNumber.text = "NaN"
+        SecondNumber.text = ""
 
         Operations = findViewById(R.id.Znamenko) as TextView
 
-        Operations.text = "..."
+        Operations.text = ""
     }
 
     /**
@@ -120,9 +120,9 @@ class MainActivity : AppCompatActivity() {
         Method = 5
 
         Screen.text = "0"
-        FirstNumber.text = "NaN"
-        SecondNumber.text = "NaN"
-        Operations.text = "..."
+        FirstNumber.text = ""
+        SecondNumber.text = ""
+        Operations.text = ""
     }
 
     /**
