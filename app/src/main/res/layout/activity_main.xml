@@ -7,12 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorBackground"
+    android:background="@color/colorMainBackground"
     tools:context="cz.petrnikolas.nikcalc.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -25,7 +25,7 @@
             android:layout_marginBottom="5dp">
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="C"
                 android:id="@+id/tlacSmaz"
@@ -34,10 +34,10 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="VymazVse"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="Del"
                 android:id="@+id/tlacSmazJeden"
@@ -46,10 +46,10 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="VymazJeden"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="√"
                 android:id="@+id/tlacOdm"
@@ -58,10 +58,10 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Odmocni"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="+/-"
                 android:id="@+id/tlacPlsMin"
@@ -70,8 +70,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Zapor"
-                android:background="@color/colorPrimary" />
-
+                android:background="@color/colorSecondaryBackground" />
         </TableRow>
 
         <TableRow
@@ -80,7 +79,7 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="7"
                 android:id="@+id/tlac7"
@@ -88,11 +87,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo"/>
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="8"
                 android:id="@+id/tlac8"
@@ -100,11 +99,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo"/>
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="9"
                 android:id="@+id/tlac9"
@@ -112,11 +111,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo"/>
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="/"
                 android:id="@+id/tlacDel"
@@ -125,7 +124,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Vydel"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
         </TableRow>
 
         <TableRow
@@ -134,7 +133,7 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="4"
                 android:id="@+id/tlac4"
@@ -142,11 +141,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="5"
                 android:id="@+id/tlac5"
@@ -154,11 +153,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="6"
                 android:id="@+id/tlac6"
@@ -166,11 +165,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="*"
                 android:id="@+id/tlacKrat"
@@ -179,7 +178,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Vynasob"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
         </TableRow>
 
         <TableRow
@@ -188,7 +187,7 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="1"
                 android:id="@+id/tlac1"
@@ -196,11 +195,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="2"
                 android:id="@+id/tlac2"
@@ -208,11 +207,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="3"
                 android:id="@+id/tlac3"
@@ -220,11 +219,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="-"
                 android:id="@+id/tlacMin"
@@ -233,7 +232,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Odecti"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
         </TableRow>
 
         <TableRow
@@ -243,7 +242,7 @@
             android:weightSum="1">
 
             <Button
-                android:layout_width="128dp"
+                android:layout_width="173dp"
                 android:layout_height="55dp"
                 android:text="0"
                 android:id="@+id/tlac0"
@@ -251,11 +250,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCislo" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="."
                 android:id="@+id/tlacCarka"
@@ -263,11 +262,11 @@
                 android:layout_marginLeft="4dp"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorMainBackground"
                 android:onClick="ZapisCarku" />
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="83dp"
                 android:layout_height="55dp"
                 android:text="+"
                 android:id="@+id/tlacPlus"
@@ -277,7 +276,7 @@
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
                 android:onClick="Secti"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorSecondaryBackground" />
         </TableRow>
 
         <TableRow
@@ -287,7 +286,7 @@
             android:weightSum="1" >
 
             <Button
-                android:layout_width="265dp"
+                android:layout_width="355dp"
                 android:layout_height="60dp"
                 android:text="="
                 android:id="@+id/tlacVysl"
@@ -297,9 +296,7 @@
                 android:textSize="32sp"
                 android:background="@color/colorPrimary"
                 android:onClick="Vypocti" />
-
         </TableRow>
-
     </LinearLayout>
 
     <LinearLayout
@@ -387,6 +384,7 @@
                 android:textColor="@color/colorBrand"
                 android:id="@+id/Obrazovka"
                 android:textSize="40sp"
+                android:textStyle="bold"
                 android:layout_alignRight="@+id/linearLayout"
                 android:layout_alignEnd="@+id/linearLayout"
                 android:layout_alignLeft="@+id/linearLayout"
@@ -395,9 +393,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="5dp"
-                android:gravity="center_vertical|center_horizontal"
                 android:layout_gravity="center_vertical"/>
         </TableRow>
-
     </LinearLayout>
 </RelativeLayout>
