@@ -41,16 +41,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_NOSENSOR
 
-        Screen = findViewById(R.id.Obrazovka) as TextView
+        Screen = findViewById(R.id.Screen) as TextView
         Screen.text = "0"
 
-        FirstNumber = findViewById(R.id.Cislo1) as TextView
+        FirstNumber = findViewById(R.id.Number1) as TextView
         FirstNumber.text = ""
 
-        SecondNumber = findViewById(R.id.Cislo2) as TextView
+        SecondNumber = findViewById(R.id.Number2) as TextView
         SecondNumber.text = ""
 
-        Operations = findViewById(R.id.Znamenko) as TextView
+        Operations = findViewById(R.id.Mark) as TextView
 
         Operations.text = ""
     }
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
      * Logika této metody je popsána v textech "Android programování 2 Calc" kapitola 1.2 Analýza a návrh aplikace. Detailní algoritmus se nachází na obrázku č. 9-Diagram připisování čísel
      * @param sender díky tomuto parametru dostaneme ID tlačítka na které uživatel kliknul.
      */
-    fun ZapisCislo(sender: View) {
+    fun AddNumber(sender: View) {
         val btn = sender as Button
         val number = java.lang.Float.parseFloat(btn.text.toString())
 
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
      * Pokud se "." na obrazovce nenachází, přidá ji na konec řetězce a nastaví true u řídící proměnné valid.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun ZapisCarku(v: View) {
+    fun AddComma(v: View) {
         if (Screen.text.length >= 8) {
             return
         }
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
      * Metoda která vynuluje všechny použité proměnné i zobrazovací textView.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun VymazVse(v: View) {
+    fun DeleteAll(v: View) {
         valid = false
         Number1 = 0.0
         Number2 = 0.0
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
      * Na základě délky řetězce buď smaže poslední znak, anebo nastaví textView Screen na "0".
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun VymazJeden(v: View) {
+    fun DeleteOne(v: View) {
         val lenght = Screen.length()
 
         if (lenght > 1) {
@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
      * Pokud jsou souřadnice znaménka "-" <=8, připíšeme "-" na začátek řetězce.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun Zapor(v: View) {
+    fun Minus(v: View) {
         val k = java.lang.Float.parseFloat(Screen.text.toString())
         if (k == 0f) {
             return
@@ -173,9 +173,9 @@ class MainActivity : AppCompatActivity() {
      * Pokud bude výsledek delší než 9 znaků, vytvoříme substring prvních 9 čísel. Pomocí podmínek ošetříme, aby se nezobrazovaly nežádoucí čísla.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun Odmocni(v: View) {
+    fun Radix(v: View) {
         val number = Math.sqrt(java.lang.Double.parseDouble(Screen.text.toString()))
-        VymazVse(v)
+        DeleteAll(v)
 
         if (number >= 0) {
             val result = number.toString()
@@ -199,7 +199,7 @@ class MainActivity : AppCompatActivity() {
             }
         } else {
             Toast.makeText(this, "Nelze odmocnit záporné číslo!", Toast.LENGTH_LONG).show()
-            VymazVse(v)
+            DeleteAll(v)
         }
     }
 
@@ -208,7 +208,7 @@ class MainActivity : AppCompatActivity() {
      * Uloží do globální proměnné Number1 číslo na obrazovce a z metodu (číslo 1-4). Také nastaví potřebné řídící proměnné.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun Secti(v: View) {
+    fun AddUp(v: View) {
         Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
         Method = 1
@@ -220,7 +220,7 @@ class MainActivity : AppCompatActivity() {
         Operations.text = "+"
     }
 
-    fun Odecti(v: View) {
+    fun Subtract(v: View) {
         Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
         Method = 2
@@ -232,7 +232,7 @@ class MainActivity : AppCompatActivity() {
         Operations.text = "-"
     }
 
-    fun Vynasob(V: View) {
+    fun Multiply(V: View) {
         Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
         Method = 3
@@ -244,7 +244,7 @@ class MainActivity : AppCompatActivity() {
         Operations.text = "*"
     }
 
-    fun Vydel(V: View) {
+    fun Divide(V: View) {
         Number1 = java.lang.Double.parseDouble(Screen.text.toString())
 
         Method = 4
@@ -263,7 +263,7 @@ class MainActivity : AppCompatActivity() {
      * Při dělení vznikají dlouhé řetězce čísel, proto je třeba po počítání zjistit, na jakém místě je desetinná čárka a podle toho zaokrouhlit.
      * @param v Zajistí nám viditelnost této metody, abychom k ní mohli přistoupit z xml, tzn. Method onclick
      */
-    fun Vypocti(v: View) {
+    fun Result(v: View) {
 
         if (SetFirstNumber == true) {
             if (Method != 5) {
@@ -294,7 +294,7 @@ class MainActivity : AppCompatActivity() {
                         // break
                     } else {
                         Toast.makeText(this, "Nelze dělit nulou!", Toast.LENGTH_LONG).show()
-                        VymazVse(v)
+                        DeleteAll(v)
                         // break
                     }
                 }
@@ -313,7 +313,7 @@ class MainActivity : AppCompatActivity() {
                 val poz = result.indexOf(".")
                 if (poz >= 8) {
                     Toast.makeText(this, "Byl překročen limit 9 čísel", Toast.LENGTH_LONG).show()
-                    VymazVse(v)
+                    DeleteAll(v)
                     return
                 }
 
