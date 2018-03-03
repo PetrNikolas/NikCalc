@@ -25,8 +25,9 @@
             android:layout_marginBottom="5dp">
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="C"
                 android:id="@+id/btnDelete"
                 android:layout_marginRight="4dp"
@@ -37,8 +38,9 @@
                 android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="Del"
                 android:id="@+id/btnDeleteOne"
                 android:layout_marginRight="4dp"
@@ -49,8 +51,9 @@
                 android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="√"
                 android:id="@+id/btnRadix"
                 android:layout_marginRight="4dp"
@@ -61,8 +64,9 @@
                 android:background="@color/colorSecondaryBackground" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="+/-"
                 android:id="@+id/btnPlusMinus"
                 android:layout_marginRight="4dp"
@@ -79,8 +83,9 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="7"
                 android:id="@+id/btn7"
                 android:layout_marginRight="4dp"
@@ -91,8 +96,9 @@
                 android:onClick="AddNumber"/>
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="8"
                 android:id="@+id/btn8"
                 android:layout_marginRight="4dp"
@@ -103,8 +109,9 @@
                 android:onClick="AddNumber"/>
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="9"
                 android:id="@+id/btn9"
                 android:layout_marginRight="4dp"
@@ -115,8 +122,9 @@
                 android:onClick="AddNumber"/>
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="/"
                 android:id="@+id/btnDel"
                 android:layout_marginLeft="4dp"
@@ -133,8 +141,9 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="4"
                 android:id="@+id/btn4"
                 android:layout_marginRight="4dp"
@@ -145,8 +154,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="5"
                 android:id="@+id/btn5"
                 android:layout_marginRight="4dp"
@@ -157,8 +167,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="6"
                 android:id="@+id/btn6"
                 android:layout_marginRight="4dp"
@@ -169,8 +180,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="*"
                 android:id="@+id/btnX"
                 android:layout_marginRight="4dp"
@@ -187,8 +199,9 @@
             android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="1"
                 android:id="@+id/btn1"
                 android:layout_marginRight="4dp"
@@ -199,8 +212,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="2"
                 android:id="@+id/btn2"
                 android:layout_marginRight="4dp"
@@ -211,8 +225,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="3"
                 android:id="@+id/btn3"
                 android:layout_marginRight="4dp"
@@ -223,8 +238,9 @@
                 android:onClick="AddNumber" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="-"
                 android:id="@+id/btnMinus"
                 android:layout_marginRight="4dp"
@@ -238,24 +254,30 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:weightSum="1">
+            android:layout_marginBottom="5dp" >
 
             <Button
-                android:layout_width="173dp"
-                android:layout_height="55dp"
-                android:text="0"
                 android:id="@+id/btn0"
-                android:layout_marginRight="4dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
-                android:textColor="@color/textColor"
-                android:textSize="30sp"
+                android:layout_marginRight="4dp"
                 android:background="@color/colorMainBackground"
-                android:onClick="AddNumber" />
+                android:onClick="AddNumber"
+                android:text="0"
+                android:textColor="@color/textColor"
+                android:textSize="30sp" />
+
+            <Space
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="."
                 android:id="@+id/btnComma"
                 android:layout_marginRight="4dp"
@@ -266,8 +288,9 @@
                 android:onClick="AddComma" />
 
             <Button
-                android:layout_width="83dp"
-                android:layout_height="55dp"
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:text="+"
                 android:id="@+id/btnPlus"
                 android:layout_marginRight="4dp"
@@ -286,8 +309,7 @@
             android:weightSum="1" >
 
             <Button
-                android:layout_width="355dp"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:text="="
                 android:id="@+id/btnResult"
                 android:layout_marginRight="4dp"
