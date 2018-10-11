@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -308,16 +309,23 @@
             android:layout_marginBottom="10dp"
             android:weightSum="1" >
 
-            <Button
-                android:layout_height="wrap_content"
-                android:text="="
-                android:id="@+id/btnResult"
-                android:layout_marginRight="4dp"
-                android:layout_marginLeft="4dp"
-                android:textColor="@color/textColor"
-                android:textSize="32sp"
-                android:background="@color/colorPrimary"
-                android:onClick="Result" />
+            <android.support.v7.widget.CardView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:elevation="10dp"
+                app:cardCornerRadius="5dp">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="="
+                    android:id="@+id/btnResult"
+                    android:textColor="@color/textColor"
+                    android:textSize="32sp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="Result"
+                    android:elevation="10dp" />
+            </android.support.v7.widget.CardView>
+
         </TableRow>
     </LinearLayout>
 
@@ -398,24 +406,28 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true">
 
-            <TextView
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0"
-                android:textColor="@color/colorBrand"
-                android:id="@+id/Screen"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                android:layout_alignRight="@+id/linearLayout"
-                android:layout_alignEnd="@+id/linearLayout"
-                android:layout_alignLeft="@+id/linearLayout"
-                android:layout_alignStart="@+id/linearLayout"
-                android:layout_above="@+id/linearLayout"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_gravity="center_vertical"/>
+                android:layout_width="match_parent"
+                android:elevation="10dp"
+                app:cardCornerRadius="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:textColor="@color/colorBrand"
+                    android:id="@+id/Screen"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:background="@color/colorMainBackground"
+                    android:layout_alignRight="@+id/linearLayout"
+                    android:layout_alignEnd="@+id/linearLayout"
+                    android:layout_alignLeft="@+id/linearLayout"
+                    android:layout_alignStart="@+id/linearLayout"
+                    android:layout_above="@+id/linearLayout"
+                    android:layout_gravity="center_vertical"/>
+            </android.support.v7.widget.CardView>
         </TableRow>
     </LinearLayout>
 </RelativeLayout>
